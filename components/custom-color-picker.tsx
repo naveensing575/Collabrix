@@ -36,7 +36,7 @@ const CustomColorPicker = forwardRef<
 
         const parsedValue = useMemo(() => {
             return value || colorToCss(lastUsedColor);
-        }, [value]);
+        }, [lastUsedColor, value]);
 
         return (
             <Popover onOpenChange={setOpen} open={open}>

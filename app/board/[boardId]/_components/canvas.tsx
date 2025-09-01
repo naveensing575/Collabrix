@@ -545,7 +545,7 @@ export const Canvas = ({ boardId }: CanvasProps) => {
         return () => {
             document.removeEventListener("keydown", onKeyDown);
         };
-    }, [history]);
+    }, [canvasState.mode, duplicateLayers, history, moveSelectedLayers]);
 
     return (
         <main className="h-full w-full relative bg-neutral-100 touch-none">
