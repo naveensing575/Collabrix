@@ -3,21 +3,24 @@
 import { Canvas } from "./_components/canvas";
 import { Room } from "@/components/room";
 import { Loading } from "./_components/loading";
-import { useEffect } from "react";
+import { useEffect, use } from "react";
+
 interface BoardIdPageProps {
-    params: { boardId: string };
+  params: Promise<{ boardId: string }>;
 }
 
 const BoardIdPage = ({ params }: BoardIdPageProps) => {
-    useEffect(() => {
-        document.title = `Board - Collabrix`;
-    }, []);
+  const unwrappedParams = use(params);
 
-    return (
-        <Room roomId={params.boardId} fallback={<Loading />}>
-            <Canvas boardId={params.boardId} />
-        </Room>
-    );
+  useEffect(() => {
+    document.title = `Board - Collabrix`;
+  }, []);
+
+  return (
+    <Room roomId={unwrappedParams.boardId} fallback={<Loading />}>
+      <Canvas boardId={unwrappedParams.boardId} />
+    </Room>
+  );
 };
 
 export default BoardIdPage;
