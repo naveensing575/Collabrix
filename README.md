@@ -6,6 +6,9 @@ Collabrix is a collaborative whiteboard application inspired by Miro, built with
 
 <img width="959" height="509" alt="ss" src="https://github.com/user-attachments/assets/a43adb25-25c2-48dc-a7e2-7a623f549bc1" />
 
+<img width="959" height="509" alt="ss1" src="https://github.com/user-attachments/assets/9e2b4ff0-9c6f-4431-a158-4f5278d4e4b9" />
+
+
 
 ## 🎥 Video Walkthrough
 
